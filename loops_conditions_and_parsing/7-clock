@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
-#code
-i=0
+#codefile
+g=0
 while [ $i -le 12 ]; do
-  echo "Hour: $i"
-  f=1
- while [$f -le 59 ]; do
-   echo "$f"
-   f = $((f+1))
- done
- i = $((i + 1))
-done 
+	echo "Hour: $g"
+  s=1
+  while [ $s -le 59 ]; do
+    echo "$s"
+    s=$((s+1))
+  done
+  g=$((g + 1))
+done
