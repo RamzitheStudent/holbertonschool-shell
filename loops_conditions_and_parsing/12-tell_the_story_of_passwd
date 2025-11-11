@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 #codefile
 while read -r username g_id home_dir cmd ad parol fullname; do
-    echo "The user $username is part of $g_id gang, lives in $home_dir and rides $cmd. $ad's place is protected by the passcode $parol, more info about the user here: $fullname
+    echo "The user $username is part of $g_id gang, lives in $home_dir and rides $cmd. $ad's place is protected by the passcode $parol, more info about the user here: $fullname"
 done /etc/passwd
