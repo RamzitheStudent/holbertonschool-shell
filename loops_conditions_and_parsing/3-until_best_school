@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #This will show Best School word with until command 10 times
 count=1
-until [ "$count" -lt 10]
+until [ "$count" -lt 10];
 do
   echo "Best School"
   count=$((count + 1))
