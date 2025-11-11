@@ -1,12 +1,14 @@
 #!/usr/bin/env bash
-#codefile
-g=0
-while [ $i -le 12 ]; do
-	echo "Hour: $g"
-  s=1
-  while [ $s -le 59 ]; do
-    echo "$s"
-    s=$((s+1))
-  done
-  g=$((g + 1))
+# Displays the time for 12 hours and 59 minutes
+hour=0
+while [ $hour -le 12 ]
+do
+	echo "Hour: $hour"
+	minute=1
+	while [ $minute -le 59 ]
+	do
+		echo "$minute"
+		((minute++))
+	done
+	((hour++))
 done
