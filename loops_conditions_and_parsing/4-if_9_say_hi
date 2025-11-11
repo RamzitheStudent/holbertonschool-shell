@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 #this is codefile
 i=1
-while [ $1 -le 10 ];
+while [ $1 -le 10 ]
 do
   echo = "Best School"
-  if [$1 -eq 9 ];
+  if [$1 -eq 9 ]
   then
     echo "Hi"
   fi
-  i=$((i + 1))
+  i=$((i++))
 done
