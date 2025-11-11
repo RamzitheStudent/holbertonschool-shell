@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 #this is codefile
-i=0
-while [ $i -le 10 ]
+counter=0
+while [ $counter -lt 10 ]
 do
-  echo = "Best School"
-  if [$i -eq 9 ]
-  then
-    echo "Hi"
-  fi
-  i=$((i++))
+	((counter++))
+	echo "Best School"
+	if [ $counter -eq 9 ]
+	then
+		echo "Hi"
+	fi
 done
