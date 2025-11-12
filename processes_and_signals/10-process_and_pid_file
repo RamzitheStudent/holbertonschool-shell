@@ -15,6 +15,8 @@ sigquit_handler() {
 trap sigterm_handler SIGTERM
 trap sigint_handler SIGINT
 trap sigquit_handler SIGQUIT
+sudo mkdir -p /var/run 2>/dev/null
+echo $ | sudo tee /var/run/myscript.pid > /dev/null
 echo $$ > /var/run/myscript.pid
 while true
 do
