@@ -1,8 +1,3 @@
 #!/usr/bin/env bash
 #cf
-for pid in /proc/[0-9]*; do
-    name=$(cat "$pid/comm" 2>/dev/null)
-    if echo "$name" | grep -q "bash"; then
-        echo "$(basename "$pid"): $name"
-    fi
-done
+pgrep -l bash
