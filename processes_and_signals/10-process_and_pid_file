@@ -1,25 +1,11 @@
 #!/usr/bin/env bash
 #cf
-sigterm_handler() {
-	echo "I hate the kill command"
-	rm -f /var/run/myscript.pid
-	exit 0
-}
-sigint_handler() {
-	echo "Y U no love me?!"
-}
-sigquit_handler() {
-	rm -f /var/run/myscript.pid
-	exit 0
-}
-trap sigterm_handler SIGTERM
-trap sigint_handler SIGINT
-trap sigquit_handler SIGQUIT
-sudo mkdir -p /var/run 2>/dev/null
-echo $ | sudo tee /var/run/myscript.pid > /dev/null
-echo $$ > /var/run/myscript.pid
-while true
-do
-	echo "To infinity and beyond"
-	sleep 2
+PID="/var/run/myscript.pid"
+echo "$$" | sudo tee "$PID" > /dev/null
+trap 'echo "I hate the kill command"' SIGTERM
+trap 'echo "Y U no love me?!"' SIGINT
+trap 'rm -f "$PID"; exit' SIGQUIT
+while true; do
+  echo "To infinity and beyond"
+  sleep 2
 done
